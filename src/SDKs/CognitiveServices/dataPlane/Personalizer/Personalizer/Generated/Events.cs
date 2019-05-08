@@ -78,9 +78,9 @@ namespace Microsoft.Azure.CognitiveServices.Personalizer
         /// </return>
         public async Task<HttpOperationResponse> RewardWithHttpMessagesAsync(string eventId, RewardRequest reward, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (Client.Endpoint == null)
+            if (this.Endpoint == null)
             {
-                throw new ValidationException(ValidationRules.CannotBeNull, "this.Client.Endpoint");
+                throw new ValidationException(ValidationRules.CannotBeNull, "this.Endpoint");
             }
             if (eventId == null)
             {
@@ -116,7 +116,7 @@ namespace Microsoft.Azure.CognitiveServices.Personalizer
             // Construct URL
             var _baseUrl = Client.BaseUri;
             var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "events/{eventId}/reward";
-            _url = _url.Replace("{Endpoint}", Client.Endpoint);
+            _url = _url.Replace("{Endpoint}", this.Endpoint);
             _url = _url.Replace("{eventId}", System.Uri.EscapeDataString(eventId));
             // Create HTTP transport objects
             var _httpRequest = new HttpRequestMessage();
@@ -226,9 +226,9 @@ namespace Microsoft.Azure.CognitiveServices.Personalizer
         /// </return>
         public async Task<HttpOperationResponse> ActivateWithHttpMessagesAsync(string eventId, Dictionary<string, List<string>> customHeaders = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (Client.Endpoint == null)
+            if (this.Endpoint == null)
             {
-                throw new ValidationException(ValidationRules.CannotBeNull, "this.Client.Endpoint");
+                throw new ValidationException(ValidationRules.CannotBeNull, "this.Endpoint");
             }
             if (eventId == null)
             {
@@ -255,7 +255,7 @@ namespace Microsoft.Azure.CognitiveServices.Personalizer
             // Construct URL
             var _baseUrl = Client.BaseUri;
             var _url = _baseUrl + (_baseUrl.EndsWith("/") ? "" : "/") + "events/{eventId}/activate";
-            _url = _url.Replace("{Endpoint}", Client.Endpoint);
+            _url = _url.Replace("{Endpoint}", this.Endpoint);
             _url = _url.Replace("{eventId}", System.Uri.EscapeDataString(eventId));
             // Create HTTP transport objects
             var _httpRequest = new HttpRequestMessage();

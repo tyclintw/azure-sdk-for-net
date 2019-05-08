@@ -4,7 +4,7 @@ Commencing code generation
 Generating CSharp code
 Executing AutoRest command
 cmd.exe /c autorest.cmd https://github.com/dwaijam/azure-rest-api-specs/blob/dwmukh/apireviewtrimmedswagger/specification/cognitiveservices/data-plane/Personalizer/readme.md --csharp --version=latest --reflect-api-versions --csharp-sdks-folder=D:\Repos\azure-sdk-for-net\src\SDKs
-2019-05-08 21:53:19 UTC
+2019-05-08 22:10:22 UTC
 Azure-rest-api-specs repository information
 GitHub fork: dwaijam
 Branch:      dwmukh/apireviewtrimmedswagger

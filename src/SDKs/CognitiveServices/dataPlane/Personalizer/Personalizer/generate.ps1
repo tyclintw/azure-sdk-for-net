@@ -1,1 +1,1 @@
-Start-AutoRestCodeGeneration -ResourceProvider "cognitiveservices/data-plane/Personalizer" -AutoRestVersion "latest"
+Start-AutoRestCodeGeneration -ResourceProvider "cognitiveservices/data-plane/Personalizer" -AutoRestVersion "latest" -SpecsRepoFork "dwaijam" -SpecsRepoBranch "dwmukh/apireviewtrimmedswagger" -SpecsRepoName "azure-rest-api-specs"
